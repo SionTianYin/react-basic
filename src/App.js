@@ -29,20 +29,80 @@
 
 // 列表渲染：map songs.map(item => <li>{item.name}</li>
 // 重复渲染的是哪个模板，就return谁
-const songs = [
-  { id: 1, name: '痴心绝对' },
-  { id: 2, name: '像我这样的人' },
-  { id: 3, name: '南山南' }
-]
+// const songs = [
+//   { id: 1, name: '痴心绝对' },
+//   { id: 2, name: '像我这样的人' },
+//   { id: 3, name: '南山南' }
+// ]
 
-function App() {
-  return (
-    <div className="App">
-      <ul>
-        {
-          songs.map(item => <li>{item.name}</li>)
-        }
-      </ul>
+// function App() {
+//   return (
+//     <div className="App">
+//       <ul>
+//         {
+//           songs.map(song => <li key={song.id}>{song.name}/</li>)
+//         }
+//       </ul>
+//     </div>
+//   )
+// }
+
+
+// // export default App
+// // 来个布尔值
+// const flag = true
+// function App() {
+//   return (
+//     <div className="App">
+//       {/* 条件渲染字符串 */}
+//       {flag ? 'react真有趣' : 'vue真有趣'}
+//       {/* 条件渲染标签/组件 */}
+//       {flag ? (
+//         <div>
+//           <span>this is span</span>
+//         </div>) : null}
+//     </div>
+//   )
+// }
+// export default App 
+
+// const getHtag = (type) =>{
+//   if(type === 1){
+//     return <h1>this is h1</h1>
+//   }
+//   if(type === 2){
+//     return <h2>this is h2</h2>
+//   }
+//   if(type === 3){
+//     return <h3>this is h3</h3>
+//   }
+// } 
+
+// function App(){
+//   return(
+//     <div classname = "App">
+//       {getHtag(1)}
+//       {getHtag(2)}
+//       {getHtag(3)}
+//     </div>
+//   )
+// }
+
+// export default App
+
+const style1 ={
+  color:'red',
+  fontSize:'30px'
+}
+const style2 ={
+  color:'green',
+}
+
+function App(){
+  return(
+    <div className = "App">
+      <span style={style1}>this is span.</span>
+      <span style={style2}>test</span>
     </div>
   )
 }
