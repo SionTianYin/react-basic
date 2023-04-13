@@ -27,7 +27,8 @@
 //   );
 // }
 
-// 来个列表
+// 列表渲染：map songs.map(item => <li>{item.name}</li>
+// 重复渲染的是哪个模板，就return谁
 const songs = [
   { id: 1, name: '痴心绝对' },
   { id: 2, name: '像我这样的人' },
