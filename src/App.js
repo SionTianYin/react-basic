@@ -90,19 +90,35 @@
 
 // export default App
 
-const style1 ={
-  color:'red',
-  fontSize:'30px'
-}
-const style2 ={
-  color:'green',
+// const style1 ={
+//   color:'red',
+//   fontSize:'30px'
+// }
+// const style2 ={
+//   color:'green',
+// }
+import React from "react"
+
+function Hello () {
+  return <div>hello</div>
 }
 
-function App(){
-  return(
-    <div className = "App">
-      <span style={style1}>this is span.</span>
-      <span style={style2}>test</span>
+class HelloComponent extends React.Component {
+  render () {
+    return <div>this is a class Component</div>
+  }
+}
+
+function App () {
+  return (
+    <div className="App">
+      {
+        <>
+          <Hello />
+          <Hello></Hello>
+          <HelloComponent></HelloComponent>
+        </>
+      }
     </div>
   )
 }
